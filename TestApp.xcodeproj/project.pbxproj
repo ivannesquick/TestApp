@@ -13,6 +13,18 @@
 		E84B10DD25C82D03009F3E0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84B10DB25C82D03009F3E0A /* Main.storyboard */; };
 		E84B10DF25C82D0A009F3E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E84B10DE25C82D0A009F3E0A /* Assets.xcassets */; };
 		E84B10E225C82D0A009F3E0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E84B10E025C82D0A009F3E0A /* LaunchScreen.storyboard */; };
+		E84B10EA25C82DCA009F3E0A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B10E925C82DCA009F3E0A /* MainViewController.swift */; };
+		E84B10EC25C83140009F3E0A /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B10EB25C83140009F3E0A /* MainCell.swift */; };
+		E84B10EF25C858AC009F3E0A /* ImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B10EE25C858AC009F3E0A /* ImageInfo.swift */; };
+		E84B10F425CAD28E009F3E0A /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B10F325CAD28E009F3E0A /* LazyImageView.swift */; };
+		E84B111D25CFC92A009F3E0A /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B111C25CFC92A009F3E0A /* ModuleBuilder.swift */; };
+		E84B112025CFC9B4009F3E0A /* IMainViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B111F25CFC9B4009F3E0A /* IMainViewOutput.swift */; };
+		E84B112225CFC9FC009F3E0A /* IMainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B112125CFC9FC009F3E0A /* IMainRouter.swift */; };
+		E84B112425CFCA11009F3E0A /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B112325CFCA11009F3E0A /* MainRouter.swift */; };
+		E84B112625CFCA3D009F3E0A /* ImainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B112525CFCA3D009F3E0A /* ImainViewInput.swift */; };
+		E84B112825CFCA89009F3E0A /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B112725CFCA89009F3E0A /* MainInteractor.swift */; };
+		E84B112A25CFCAAE009F3E0A /* IMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B112925CFCAAE009F3E0A /* IMainInteractor.swift */; };
+		E84B112C25CFCCA4009F3E0A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B112B25CFCCA4009F3E0A /* MainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +36,18 @@
 		E84B10DE25C82D0A009F3E0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E84B10E125C82D0A009F3E0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E84B10E325C82D0A009F3E0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E84B10E925C82DCA009F3E0A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E84B10EB25C83140009F3E0A /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		E84B10EE25C858AC009F3E0A /* ImageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfo.swift; sourceTree = "<group>"; };
+		E84B10F325CAD28E009F3E0A /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
+		E84B111C25CFC92A009F3E0A /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		E84B111F25CFC9B4009F3E0A /* IMainViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMainViewOutput.swift; sourceTree = "<group>"; };
+		E84B112125CFC9FC009F3E0A /* IMainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMainRouter.swift; sourceTree = "<group>"; };
+		E84B112325CFCA11009F3E0A /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		E84B112525CFCA3D009F3E0A /* ImainViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImainViewInput.swift; sourceTree = "<group>"; };
+		E84B112725CFCA89009F3E0A /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		E84B112925CFCAAE009F3E0A /* IMainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMainInteractor.swift; sourceTree = "<group>"; };
+		E84B112B25CFCCA4009F3E0A /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,13 @@
 		E84B10D425C82D03009F3E0A /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				E84B112D25CFCF43009F3E0A /* Utills */,
+				E84B111B25CFC90E009F3E0A /* MainView */,
+				E84B111A25CFC8FC009F3E0A /* ModuleBuilder */,
+				E84B111925CFC8EF009F3E0A /* MainRouter */,
+				E84B111825CFC8E3009F3E0A /* MainInteractor */,
+				E84B111725CFC8D5009F3E0A /* MainPresenter */,
+				E84B10ED25C85880009F3E0A /* Entity */,
 				E84B10D525C82D03009F3E0A /* AppDelegate.swift */,
 				E84B10D725C82D03009F3E0A /* SceneDelegate.swift */,
 				E84B10D925C82D03009F3E0A /* ViewController.swift */,
@@ -65,6 +96,75 @@
 				E84B10E325C82D0A009F3E0A /* Info.plist */,
 			);
 			path = TestApp;
+			sourceTree = "<group>";
+		};
+		E84B10ED25C85880009F3E0A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				E84B10EE25C858AC009F3E0A /* ImageInfo.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		E84B111725CFC8D5009F3E0A /* MainPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				E84B112B25CFCCA4009F3E0A /* MainPresenter.swift */,
+			);
+			path = MainPresenter;
+			sourceTree = "<group>";
+		};
+		E84B111825CFC8E3009F3E0A /* MainInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				E84B112725CFCA89009F3E0A /* MainInteractor.swift */,
+				E84B112925CFCAAE009F3E0A /* IMainInteractor.swift */,
+			);
+			path = MainInteractor;
+			sourceTree = "<group>";
+		};
+		E84B111925CFC8EF009F3E0A /* MainRouter */ = {
+			isa = PBXGroup;
+			children = (
+				E84B112125CFC9FC009F3E0A /* IMainRouter.swift */,
+				E84B112325CFCA11009F3E0A /* MainRouter.swift */,
+			);
+			path = MainRouter;
+			sourceTree = "<group>";
+		};
+		E84B111A25CFC8FC009F3E0A /* ModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				E84B111C25CFC92A009F3E0A /* ModuleBuilder.swift */,
+			);
+			path = ModuleBuilder;
+			sourceTree = "<group>";
+		};
+		E84B111B25CFC90E009F3E0A /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				E84B10E925C82DCA009F3E0A /* MainViewController.swift */,
+				E84B111E25CFC988009F3E0A /* Cell */,
+				E84B111F25CFC9B4009F3E0A /* IMainViewOutput.swift */,
+				E84B112525CFCA3D009F3E0A /* ImainViewInput.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		E84B111E25CFC988009F3E0A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E84B10EB25C83140009F3E0A /* MainCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E84B112D25CFCF43009F3E0A /* Utills */ = {
+			isa = PBXGroup;
+			children = (
+				E84B10F325CAD28E009F3E0A /* LazyImageView.swift */,
+			);
+			path = Utills;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +240,19 @@
 			files = (
 				E84B10DA25C82D03009F3E0A /* ViewController.swift in Sources */,
 				E84B10D625C82D03009F3E0A /* AppDelegate.swift in Sources */,
+				E84B112A25CFCAAE009F3E0A /* IMainInteractor.swift in Sources */,
 				E84B10D825C82D03009F3E0A /* SceneDelegate.swift in Sources */,
+				E84B10F425CAD28E009F3E0A /* LazyImageView.swift in Sources */,
+				E84B112825CFCA89009F3E0A /* MainInteractor.swift in Sources */,
+				E84B112425CFCA11009F3E0A /* MainRouter.swift in Sources */,
+				E84B111D25CFC92A009F3E0A /* ModuleBuilder.swift in Sources */,
+				E84B112025CFC9B4009F3E0A /* IMainViewOutput.swift in Sources */,
+				E84B10EF25C858AC009F3E0A /* ImageInfo.swift in Sources */,
+				E84B112C25CFCCA4009F3E0A /* MainPresenter.swift in Sources */,
+				E84B112225CFC9FC009F3E0A /* IMainRouter.swift in Sources */,
+				E84B10EA25C82DCA009F3E0A /* MainViewController.swift in Sources */,
+				E84B10EC25C83140009F3E0A /* MainCell.swift in Sources */,
+				E84B112625CFCA3D009F3E0A /* ImainViewInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
