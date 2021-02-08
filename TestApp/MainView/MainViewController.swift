@@ -20,7 +20,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     var imageCollectionView: UICollectionView?
     
     fileprivate var refreshControl: UIRefreshControl = {
-       let refreshControl = UIRefreshControl()
+        let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshItems), for: .valueChanged)
         return refreshControl
     }()
@@ -77,7 +77,6 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return (viewOutput?.viewDidLoad().count)!
         return limit
     }
     
@@ -100,6 +99,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
             cell?.layer.transform = rotationTransform
         }), completion: nil)
         viewOutput?.removeItem(indexPath: indexPath)
+        limit -= 1
     }
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -116,39 +116,42 @@ extension MainViewController: IMainViewInput {
 extension MainViewController {
     @objc func refreshItems(sender: UIRefreshControl) {
         viewOutput?.refreshItems()
+        limit = 1
         sender.endRefreshing()
     }
 }
-    //MARK: - Implemented a gradual loading of content
+
+//MARK: - Pagination
 extension MainViewController: UIScrollViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-
+        
         print("scrollViewWillBeginDragging")
         isDataLoading = false
     }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         print("scrollViewDidEndDecelerating")
     }
-    //Pagination
+    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-
-            print("scrollViewDidEndDragging")
+        
+        print("scrollViewDidEndDragging")
         if ((self.imageCollectionView!.contentOffset.y + self.imageCollectionView!.frame.size.height) >= self.imageCollectionView!.contentSize.height)
-            {
-                if !isDataLoading{
-                    if limit <= ((viewOutput?.viewDidLoad().count)! - 1) {
-                        isDataLoading = true
-                        self.pageNo=self.pageNo+1
-                        self.limit=self.limit+1
-                        self.offset=self.limit * self.pageNo
-                        reloadData()
-                    } else {
-                        isDataLoading = false
-                    }
+        {
+            if !isDataLoading{
+                if limit <= ((viewOutput?.viewDidLoad().count)! - 1) {
+                    isDataLoading = true
+                    self.pageNo=self.pageNo+1
+                    self.limit=self.limit+1
+                    self.offset=self.limit * self.pageNo
+                    reloadData()
+                } else {
+                    isDataLoading = false
                 }
             }
-
-
+        }
+        
+        
     }
 }
 
