@@ -10,4 +10,6 @@ import Foundation
 
 protocol IMainInteractor {
     func items() -> [ImageInfo]
+    func removeItem(index: Int)
+    func refreshAllElements() -> [ImageInfo]
 }

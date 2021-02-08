@@ -28,13 +28,13 @@ class MainPresenter: IMainViewOutput {
     func removeItem(indexPath: IndexPath) {
         self.timer?.invalidate()
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { (_) in
-            self.items.remove(at: indexPath.row)
+            self.interactor.removeItem(index: indexPath.item)
             self.view?.reloadData()
         })
     }
     
     func refreshItems() {
-        items = interactor.items()
+        items = interactor.refreshAllElements()
         view?.reloadData()
     }
 }

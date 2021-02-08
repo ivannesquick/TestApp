@@ -139,7 +139,8 @@ extension MainViewController: UIScrollViewDelegate {
         if ((self.imageCollectionView!.contentOffset.y + self.imageCollectionView!.frame.size.height) >= self.imageCollectionView!.contentSize.height)
         {
             if !isDataLoading{
-                if limit <= ((viewOutput?.viewDidLoad().count)! - 1) {
+                guard let viewOutput = viewOutput else { return }
+                if limit <= viewOutput.viewDidLoad().count - 1 {
                     isDataLoading = true
                     self.pageNo=self.pageNo+1
                     self.limit=self.limit+1
