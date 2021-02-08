@@ -10,6 +10,12 @@ import UIKit
 
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    var isDataLoading:Bool=false
+    var pageNo:Int=0
+    var limit:Int=1
+    var offset:Int=0 //pageNo*limit
+    var didEndReached:Bool=false
+    
     var viewOutput: IMainViewOutput?
     var imageCollectionView: UICollectionView?
     
@@ -71,7 +77,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (viewOutput?.viewDidLoad().count)!
+//        return (viewOutput?.viewDidLoad().count)!
+        return limit
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -89,10 +96,14 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = imageCollectionView?.cellForItem(at: indexPath)
         UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .allowAnimatedContent, animations: ({
-            let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, 500, 10, 0)
+            let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, 800, 10, 0)
             cell?.layer.transform = rotationTransform
         }), completion: nil)
         viewOutput?.removeItem(indexPath: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        isDataLoading = false
     }
 }
 
@@ -106,6 +117,38 @@ extension MainViewController {
     @objc func refreshItems(sender: UIRefreshControl) {
         viewOutput?.refreshItems()
         sender.endRefreshing()
+    }
+}
+    //MARK: - Implemented a gradual loading of content
+extension MainViewController: UIScrollViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+
+        print("scrollViewWillBeginDragging")
+        isDataLoading = false
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print("scrollViewDidEndDecelerating")
+    }
+    //Pagination
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+
+            print("scrollViewDidEndDragging")
+        if ((self.imageCollectionView!.contentOffset.y + self.imageCollectionView!.frame.size.height) >= self.imageCollectionView!.contentSize.height)
+            {
+                if !isDataLoading{
+                    if limit <= ((viewOutput?.viewDidLoad().count)! - 1) {
+                        isDataLoading = true
+                        self.pageNo=self.pageNo+1
+                        self.limit=self.limit+1
+                        self.offset=self.limit * self.pageNo
+                        reloadData()
+                    } else {
+                        isDataLoading = false
+                    }
+                }
+            }
+
+
     }
 }
 
