@@ -10,11 +10,11 @@ import UIKit
 
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var isDataLoading:Bool=false
-    var pageNo:Int=0
-    var limit:Int=1
-    var offset:Int=0 //pageNo*limit
-    var didEndReached:Bool=false
+    var isDataLoading:Bool = false
+    var pageNo:Int = 0
+    var limit:Int = 1
+    var offset:Int = 0
+    var didEndReached:Bool = false
     
     var viewOutput: IMainViewOutput?
     var imageCollectionView: UICollectionView?
@@ -150,8 +150,6 @@ extension MainViewController: UIScrollViewDelegate {
                 }
             }
         }
-        
-        
     }
 }
 
