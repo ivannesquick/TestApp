@@ -25,6 +25,8 @@
 		E84B112825CFCA89009F3E0A /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B112725CFCA89009F3E0A /* MainInteractor.swift */; };
 		E84B112A25CFCAAE009F3E0A /* IMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B112925CFCAAE009F3E0A /* IMainInteractor.swift */; };
 		E84B112C25CFCCA4009F3E0A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84B112B25CFCCA4009F3E0A /* MainPresenter.swift */; };
+		E8868C7826010D0B00598390 /* ImageStubsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8868C7726010D0B00598390 /* ImageStubsService.swift */; };
+		E8868C7B2601108300598390 /* IImageStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8868C7A2601108300598390 /* IImageStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		E84B112725CFCA89009F3E0A /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		E84B112925CFCAAE009F3E0A /* IMainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMainInteractor.swift; sourceTree = "<group>"; };
 		E84B112B25CFCCA4009F3E0A /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		E8868C7726010D0B00598390 /* ImageStubsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStubsService.swift; sourceTree = "<group>"; };
+		E8868C7A2601108300598390 /* IImageStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IImageStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		E84B10D425C82D03009F3E0A /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				E8868C7926010F0200598390 /* Service */,
 				E84B112D25CFCF43009F3E0A /* Utills */,
 				E84B111B25CFC90E009F3E0A /* MainView */,
 				E84B111A25CFC8FC009F3E0A /* ModuleBuilder */,
@@ -167,6 +172,15 @@
 			path = Utills;
 			sourceTree = "<group>";
 		};
+		E8868C7926010F0200598390 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E8868C7726010D0B00598390 /* ImageStubsService.swift */,
+				E8868C7A2601108300598390 /* IImageStub.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,8 +259,10 @@
 				E84B10F425CAD28E009F3E0A /* LazyImageView.swift in Sources */,
 				E84B112825CFCA89009F3E0A /* MainInteractor.swift in Sources */,
 				E84B112425CFCA11009F3E0A /* MainRouter.swift in Sources */,
+				E8868C7826010D0B00598390 /* ImageStubsService.swift in Sources */,
 				E84B111D25CFC92A009F3E0A /* ModuleBuilder.swift in Sources */,
 				E84B112025CFC9B4009F3E0A /* IMainViewOutput.swift in Sources */,
+				E8868C7B2601108300598390 /* IImageStub.swift in Sources */,
 				E84B10EF25C858AC009F3E0A /* ImageInfo.swift in Sources */,
 				E84B112C25CFCCA4009F3E0A /* MainPresenter.swift in Sources */,
 				E84B112225CFC9FC009F3E0A /* IMainRouter.swift in Sources */,
